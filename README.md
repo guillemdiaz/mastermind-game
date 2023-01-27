@@ -1,4 +1,4 @@
-# Mastermind Game
+
 
 Just go to https://guillemdiaz.github.io/mastermind-game/
 
