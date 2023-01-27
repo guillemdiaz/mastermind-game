@@ -183,10 +183,10 @@ function updateGuessesTable(number) {
         var cell = tr.insertCell(i);
         /* green okay icon */
         if (i == 4)
-            cell.innerHTML = '<img src="../okay-icons/ok-green-icon.png" />';
+            cell.innerHTML = '<img src="./okay-icons/ok-green-icon.png" />';
         else if (i == 5 || i == 7) continue;
         /* orange okay icon */ else if (i == 6)
-            cell.innerHTML = '<img src="../okay-icons/ok-orange-icon.png" />';
+            cell.innerHTML = '<img src="./okay-icons/ok-orange-icon.png" />';
         else {
             cell.innerHTML = number[i];
             /* Controls right guesses and almost right guesses */
