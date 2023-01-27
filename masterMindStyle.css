@@ -1,0 +1,246 @@
+/*********************** author: Guillem Díaz (u1961604) **********************/
+
+html,
+body {
+    margin-left: 175px;
+    margin-right: 175px;
+    background-color: #e5e4e2;
+    min-height: 100vh;
+    height: 100%;
+}
+
+/*********************************** HEADER ***********************************/
+
+#header {
+    display: flex;
+    background-color: #1034a6;
+    margin-top: -10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: bold;
+    font-size: 36px;
+    color: white;
+}
+
+/****************************** MAIN (introInfo) *****************************/
+
+#introInfo {
+    font-size: 16px;
+    font-family: "Courier New";
+    font-weight: 500;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: oblique;
+    font-size: 26px;
+    background-color: hsl(0, 0%, 70%);
+    padding-left: 20px;
+}
+
+/* Selects all buttons except the one with class = "bulb" */
+button:not(.bulb) {
+    font-family: "Courier New";
+    color: white;
+    background-color: #1034a6;
+    padding: 4px 16px 4px 16px;
+    border: 1px solid #1034a6;
+    border-radius: 5px;
+}
+
+button:not(.bulb):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0 0);
+}
+
+button:not(.bulb):active {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0 0);
+}
+
+/* Class added with javascript */
+.result {
+    padding-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 3px solid #1034a6;
+}
+
+img {
+    width: 15px;
+    height: 15px;
+    filter: contrast(100%);
+}
+
+/****************************** Clue icon (bulb) ******************************/
+
+/* Class added with javascript */
+.bulb {
+    border: none;
+    background-image: url(./bulbs/blank-bulb.png);
+    background-color: #e5e4e2;
+    float: left;
+    margin-top: 7.5px;
+    width: 24px;
+    height: 24px;
+    scale: 0.95;
+    text-align: center;
+    vertical-align: top;
+}
+
+.bulb:hover {
+    background-image: url(./bulbs/light-bulb.png);
+}
+
+.bulb:active {
+    transform: scale(1.075);
+}
+
+/*********************************** Table ************************************/
+
+table {
+    margin: 0px auto 20px auto;
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+}
+
+table tr td {
+    border-radius: 15%;
+    height: 25px;
+}
+
+/* Selects all cells in the first row */
+.first-row td {
+    user-select: none;
+    color: transparent;
+}
+
+/* Selects all images in the first row */
+.first-row img {
+    opacity: 0;
+}
+
+/* Selects the first 4 elements in the first row */
+.first-row td:nth-child(-n + 4) {
+    padding: 0px 9px;
+    border: 1px solid black;
+    background-color: #504a4b;
+}
+
+/* Selects the first 4 elements in all rows (except the first one) */
+.row td:nth-child(-n + 4) {
+    padding: 1px 7px;
+    border: 1px solid black;
+}
+
+/* Selects the 5th and 7th element in all rows */
+table tr td:nth-child(2n + 5) {
+    width: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+/* Selects the image of the 5th and 7th element in all rows */
+table tr td:nth-child(2n + 5) img {
+    margin-top: 5px;
+}
+
+/* Animation to reveal a digit of the number to guess */
+.show-result {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+    0% {
+        color: transparent;
+    }
+    10%,
+    90% {
+        transform: translate3d(-1.5px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2.5px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4.5px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4.5px, 0, 0);
+    }
+    90% {
+        color: transparent;
+        background-color: #1034a6;
+    }
+    100% {
+        color: white;
+        background-color: #1034a6;
+    }
+}
+
+/********************************* Input-info *********************************/
+
+/* End and Reset buttons */
+/* Classes added with javascript */
+.end,
+.reset {
+    float: right;
+    margin-left: 10px;
+}
+
+.label:not(#inputInfo:first-child) {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#input,
+#clue-input,
+#round-input {
+    height: 17.5px;
+    border: 0.75px solid black;
+    border-radius: 3px;
+    margin-right: 5px;
+    background-color: whitesmoke;
+}
+
+#input[type="text"],
+#clue-input[type="number"],
+#round-input[type="number"] {
+    font-family: "Courier New";
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#clue-input {
+    width: 35px;
+}
+
+#round-input {
+    width: 50px;
+}
+
+/*********************************** FOOTER ***********************************/
+
+#footer {
+    font-family: "Courier New Light";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    background-color: #1034a6;
+    height: 26px;
+    bottom: 0;
+    color: white;
+    font-size: 16px;
+    margin-bottom: -10px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Guillem Díaz" />
+        <title>Master Mind</title>
+        <link rel="stylesheet" type="text/css" href="masterMindStyle.css" />
+        <script src="masterMind.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Master Mind</h1>
+        </div>
+        <div id="introInfo">
+            <h2>Player information</h2>
+            <p id="inputInfo">
+                <span class="label">Name</span>
+                <!-- autofocus makes the input element automatically get focus
+                when the page loads so the player doesn't have to click on it-->
+                <input type="text" id="input" autofocus />
+                <span class="label">Clues</span>
+                <input
+                    type="number"
+                    min="0"
+                    max="4"
+                    value="0"
+                    id="clue-input"
+                />
+                <span class="label">Rounds</span>
+                <input
+                    type="number"
+                    min="1"
+                    max="15"
+                    value="10"
+                    id="round-input"
+                />
+            </p>
+            <p>
+                <button onclick="load()">Play!</button>
+            </p>
+        </div>
+        <div id="footer">Copyright © 2022 Guillem Díaz</div>
+    </body>
+</html>
