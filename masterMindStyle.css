@@ -79,7 +79,7 @@ img {
 /* Class added with javascript */
 .bulb {
     border: none;
-    background-image: url(./bulbs/blank-bulb.png);
+    background-image: url(bulbs/blank-bulb.png);
     background-color: #e5e4e2;
     float: left;
     margin-top: 7.5px;
@@ -91,7 +91,7 @@ img {
 }
 
 .bulb:hover {
-    background-image: url(./bulbs/light-bulb.png);
+    background-image: url(bulbs/light-bulb.png);
 }
 
 .bulb:active {
