@@ -1,4 +1,4 @@
-/*********************** author: Guillem Díaz (u1961604) **********************/
+/*********************** author: Guillem Díaz **********************/
 
 /* Initializes a new player */
 function Player(name, wins, loses) {
@@ -162,9 +162,9 @@ function initializeGuessesTable() {
             numberToGuessNumbers.push(random_number);
             cell.innerHTML = 0;
         } else if (i == 4)
-            cell.innerHTML = '<img src="../okay-icons/ok-green-icon.png" />';
+            cell.innerHTML = '<img src="okay-icons/ok-green-icon.png" />';
         else if (i == 6)
-            cell.innerHTML = '<img src="../okay-icons/ok-orange-icon.png" />';
+            cell.innerHTML = '<img src="okay-icons/ok-orange-icon.png" />';
         else cell.innerHTML = 0;
     }
 }
@@ -183,10 +183,10 @@ function updateGuessesTable(number) {
         var cell = tr.insertCell(i);
         /* green okay icon */
         if (i == 4)
-            cell.innerHTML = '<img src="../okay-icons/ok-green-icon.png" />';
+            cell.innerHTML = '<img src="okay-icons/ok-green-icon.png" />';
         else if (i == 5 || i == 7) continue;
         /* orange okay icon */ else if (i == 6)
-            cell.innerHTML = '<img src="../okay-icons/ok-orange-icon.png" />';
+            cell.innerHTML = '<img src="okay-icons/ok-orange-icon.png" />';
         else {
             cell.innerHTML = number[i];
             /* Controls right guesses and almost right guesses */
